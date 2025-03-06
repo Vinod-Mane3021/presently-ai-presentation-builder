@@ -124,6 +124,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  button, [role="button"] {
+    cursor: pointer;
+  }
 }
 
 .text-presently{
