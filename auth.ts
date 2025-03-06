@@ -7,6 +7,7 @@ import {
 import { Env } from "./constants/env";
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"
+import { DEFAULT_LOGIN_REDIRECT } from "./routes";
 
 class InvalidLoginError extends CredentialsSignin {
   code: string = "";
@@ -125,8 +126,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       return session;
     },
-    async redirect({ baseUrl }) {
-      return baseUrl;
+    async redirect() {
+      return DEFAULT_LOGIN_REDIRECT;
     },
   },
   secret: Env.AUTH_SECRET,
