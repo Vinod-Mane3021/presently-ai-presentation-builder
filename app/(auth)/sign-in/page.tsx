@@ -54,7 +54,7 @@ const SignInPage = () => {
             <p className="font-semibold text-xl text-center tracking-tight">
               Sign in to{" "}
               <span className="bg-gradient-to-r bg-clip-text text-transparent from-primary to-primary/70">
-                Cloud IDE
+                Presently
               </span>
             </p>
             <p className="text-sm font-medium text-center text-muted-foreground">

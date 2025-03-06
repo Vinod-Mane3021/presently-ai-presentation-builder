@@ -5,6 +5,8 @@ import {
   signInWithOAuthProvider,
 } from "./features/user/api/sign-in";
 import { Env } from "./constants/env";
+import Google from "next-auth/providers/google"
+import GitHub from "next-auth/providers/github"
 
 class InvalidLoginError extends CredentialsSignin {
   code: string = "";
@@ -17,6 +19,16 @@ class InvalidLoginError extends CredentialsSignin {
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
+    Google({
+      name: "google",
+      clientId: Env.AUTH_GOOGLE_CLIENT_ID,
+      clientSecret: Env.AUTH_GOOGLE_CLIENT_SECRET
+    }),
+    GitHub({
+      name: "github",
+      clientId: Env.AUTH_GITHUB_CLIENT_ID,
+      clientSecret: Env.AUTH_GITHUB_CLIENT_SECRET
+    }),
     Credentials({
       name: "credentials",
       credentials: {
