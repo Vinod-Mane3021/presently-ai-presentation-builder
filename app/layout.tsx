@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Presently: AI Presentation Builder",
-  description: "Builder presentations with the help of AI",
+  description: "An AI-powered presentation builder that creates engaging slides effortlessly.",
 };
 
 export default function RootLayout({
