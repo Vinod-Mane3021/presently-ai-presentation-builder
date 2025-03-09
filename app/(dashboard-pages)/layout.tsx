@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
-import { Header } from "@/components/header";
+import { Header } from "@/components/header/header";
 import { Separator } from "@/components/ui/separator";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -9,14 +9,9 @@ export default function Layout({ children }: { children: ReactNode }) {
     <SidebarProvider className="" suppressHydrationWarning>
       <AppSidebar />
       <main className="w-full">
-        <div className=" flex items-center py-4 gap-x-10 px-5">
-          <SidebarTrigger className="p-1" />
-          <Header />
-        </div>
+        <Header />
         <Separator className="w-full" />
-        <div className="px-5 py-5">
-          {children}
-        </div>
+        <div className="px-5 py-5 overflow-y-auto">{children}</div>
       </main>
     </SidebarProvider>
   );

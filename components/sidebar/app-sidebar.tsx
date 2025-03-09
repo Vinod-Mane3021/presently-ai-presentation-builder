@@ -8,6 +8,7 @@ import {
   Home,
   LayoutTemplate,
   Settings,
+  Share2,
   Trash2,
 } from "lucide-react"
 
@@ -52,6 +53,11 @@ const data = {
       name: "Home",
       url: "/dashboard",
       icon: Home,
+    },
+    {
+      name: "Shared",
+      url: "/shared",
+      icon: Share2,
     },
     {
       name: "Templates",

@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/header/mode-toggle";
 import { ReactNode } from "react";
 
  const Layout = ({children}: {children: ReactNode}) => {
