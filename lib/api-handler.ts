@@ -3,6 +3,8 @@ import { ApiResponse } from "./api-response";
 import { errorMessage } from "@/constants/messages";
 import { HttpStatus, HttpStatusCode } from "@/constants/http-status";
 import { auth } from "@/auth";
+import { User } from "next-auth";
+
 
 export const withApiHandler = (
   handler: (req: Request) => Promise<ApiResponse>
@@ -22,12 +24,13 @@ export const withApiHandler = (
   };
 };
 
-export const withAuthorizedHandler = (
-  handler: (req: Request) => Promise<ApiResponse>
+export const withAuthorizedApiHandler = (
+  handler: (req: Request, user: User ) => Promise<ApiResponse>
 ) => {
   return withApiHandler(async (req: Request) => {
     const session = await auth();
-    if (!session) {
+    const user = session?.user
+    if (!user) {
       return new ApiResponse({
         success: false,
         message: errorMessage.unauthorizedAccess,
@@ -35,7 +38,6 @@ export const withAuthorizedHandler = (
         statusCode: HttpStatusCode.UNAUTHORIZED,
       });
     }
-
-    return handler(req);
+    return handler(req, user);
   });
 };
