@@ -1,5 +1,4 @@
 import { HttpStatus, HttpStatusCode } from "@/constants/http-status";
-import { getProjectsByUser } from "@/db/services/product";
 import { withAuthorizedApiHandler } from "@/lib/api-handler";
 import { ApiResponse } from "@/lib/api-response";
 import { User } from "next-auth";
@@ -148,7 +147,9 @@ const sample_data = [
 ]
 
 export const GET = withAuthorizedApiHandler( async (req: Request, user: User) => {
-    const projects = await getProjectsByUser(user.id);
+    // const projects = await getProjectsByUser(user.id);
+
+    console.log({req, user})
 
     return new ApiResponse({
       success: true,

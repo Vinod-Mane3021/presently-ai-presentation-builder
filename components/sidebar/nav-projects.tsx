@@ -22,7 +22,6 @@ export function NavProjects({
   }[];
 }) {
   const pathname = usePathname()
-  console.log({pathname})
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarMenu>
