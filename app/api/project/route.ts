@@ -15,8 +15,8 @@ const sample_data = [
     "variantId": "variant_1",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "light",
-    "createdAt": "2023-10-01T10:00:00Z",
-    "updatedAt": "2023-10-01T10:00:00Z"
+    "createdAt": "2024-10-01T10:00:00Z",
+    "updatedAt": "2024-10-01T10:00:00Z"
   },
   {
     "id": "project_2",
@@ -29,8 +29,8 @@ const sample_data = [
     "variantId": null,
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "dark",
-    "createdAt": "2023-10-02T11:00:00Z",
-    "updatedAt": "2023-10-02T11:00:00Z"
+    "createdAt": "2024-10-02T11:00:00Z",
+    "updatedAt": "2024-10-02T11:00:00Z"
   },
   {
     "id": "project_3",
@@ -43,8 +43,8 @@ const sample_data = [
     "variantId": "variant_2",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "light",
-    "createdAt": "2023-10-03T12:00:00Z",
-    "updatedAt": "2023-10-03T12:00:00Z"
+    "createdAt": "2024-10-03T12:00:00Z",
+    "updatedAt": "2024-10-03T12:00:00Z"
   },
   {
     "id": "project_4",
@@ -57,8 +57,8 @@ const sample_data = [
     "variantId": "variant_3",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "dark",
-    "createdAt": "2023-10-04T13:00:00Z",
-    "updatedAt": "2023-10-04T13:00:00Z"
+    "createdAt": "2024-10-04T13:00:00Z",
+    "updatedAt": "2024-10-04T13:00:00Z"
   },
   {
     "id": "project_5",
@@ -71,8 +71,8 @@ const sample_data = [
     "variantId": null,
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "light",
-    "createdAt": "2023-10-05T14:00:00Z",
-    "updatedAt": "2023-10-05T14:00:00Z"
+    "createdAt": "2024-10-05T14:00:00Z",
+    "updatedAt": "2024-10-05T14:00:00Z"
   },
   {
     "id": "project_6",
@@ -85,8 +85,8 @@ const sample_data = [
     "variantId": "variant_4",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "dark",
-    "createdAt": "2023-10-06T15:00:00Z",
-    "updatedAt": "2023-10-06T15:00:00Z"
+    "createdAt": "2024-10-06T15:00:00Z",
+    "updatedAt": "2024-10-06T15:00:00Z"
   },
   {
     "id": "project_7",
@@ -99,8 +99,8 @@ const sample_data = [
     "variantId": "variant_5",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "light",
-    "createdAt": "2023-10-07T16:00:00Z",
-    "updatedAt": "2023-10-07T16:00:00Z"
+    "createdAt": "2024-10-07T16:00:00Z",
+    "updatedAt": "2024-10-07T16:00:00Z"
   },
   {
     "id": "project_8",
@@ -113,8 +113,8 @@ const sample_data = [
     "variantId": null,
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "dark",
-    "createdAt": "2023-10-08T17:00:00Z",
-    "updatedAt": "2023-10-08T17:00:00Z"
+    "createdAt": "2024-10-08T17:00:00Z",
+    "updatedAt": "2024-10-08T17:00:00Z"
   },
   {
     "id": "project_9",
@@ -127,8 +127,8 @@ const sample_data = [
     "variantId": "variant_6",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "light",
-    "createdAt": "2023-10-09T18:00:00Z",
-    "updatedAt": "2023-10-09T18:00:00Z"
+    "createdAt": "2024-10-09T18:00:00Z",
+    "updatedAt": "2024-10-09T18:00:00Z"
   },
   {
     "id": "project_10",
@@ -141,8 +141,8 @@ const sample_data = [
     "variantId": "variant_7",
     "thumbnail": "/images/test/project_thumbnail_1.jpg",
     "themeName": "dark",
-    "createdAt": "2023-10-10T19:00:00Z",
-    "updatedAt": "2023-10-10T19:00:00Z"
+    "createdAt": "2024-10-10T19:00:00Z",
+    "updatedAt": "2024-10-10T19:00:00Z"
   }
 ]
 

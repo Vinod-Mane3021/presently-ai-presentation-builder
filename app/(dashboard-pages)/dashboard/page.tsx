@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CustomTooltip } from "@/components/custom-tooltip";
+import { getDateDifference } from "@/lib/date";
 
 const DashboardPage = () => {
   const allProjects = useGetProjects();
@@ -23,7 +24,7 @@ const DashboardPage = () => {
       <p className="text-muted-foreground">All your work at one place</p>
 
       {/* projects */}
-      <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-5">
         {allProjects.data?.data?.map((project) => (
           <Card key={project.id} className="w-full flex flex-col p-0 gap-0">
             <CardContent className="w-full h-36 relative flex-shrink-0 p-0"> {/* Set a fixed height for the parent container */}
@@ -37,7 +38,7 @@ const DashboardPage = () => {
             <CardFooter className="px-2 py-3 flex flex-col items-start">
               <p className="max-w-full truncate">{project.title}</p>
               <div className="flex w-full justify-between items-center">
-                <p>{project.updatedAt.toString()}</p>
+                <p className="text-muted-foreground text-sm">Created {getDateDifference(new Date(), project.createdAt)} ago</p>
                 <CustomTooltip label="Move to trash">
                   <Button className="bg-accent" variant="outline" size="sm">Delete</Button>
                 </CustomTooltip>
