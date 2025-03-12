@@ -15,7 +15,7 @@ type ResponseType = {
   message: string | undefined;
 };
 
-export const useSignInWithProvider = () => {
+export const useSignInWithProviderMutation = () => {
   const router = useRouter()
   const mutation = useMutation<ResponseType, Error, RequestType>({
     mutationFn: async (json) => {

@@ -10,11 +10,11 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Loader } from "@/components/loader"
 import { PasswordInput } from "@/components/password-input"
-import { useSignInWithProvider } from "@/hooks/api/use-signin-with-provider"
+import { useSignInWithProviderMutation } from "@/hooks/api/use-signin-with-provider-mutation"
 import { AlertMessage } from "@/components/alert-message"
 import type { BuiltInProviderType } from "next-auth/providers"
 import { OauthProviderContainer } from "@/components/oauth-provider-container"
-import { useSignUp } from "@/hooks/api/use-signup"
+import { useSignUpMutation } from "@/hooks/api/use-signup-mutation"
 import { signUpSchema } from "@/schemas/user"
 import { useRouter } from "next/navigation"
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes"
@@ -31,8 +31,8 @@ const SignUpPage = () => {
       password: "",
     },
   })
-  const signInWithProviderMutation = useSignInWithProvider()
-  const signUpMutation = useSignUp()
+  const signInWithProviderMutation = useSignInWithProviderMutation()
+  const signUpMutation = useSignUpMutation()
 
   const message =
     signUpMutation.data?.message || 

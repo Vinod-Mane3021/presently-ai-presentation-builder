@@ -5,7 +5,7 @@ import { useMutation } from "@tanstack/react-query";
 type RequestType = SignUpType;
 type ResponseType = ApiResponseType;
 
-export const useSignUp = () => {
+export const useSignUpMutation = () => {
   const mutation = useMutation<ResponseType, Error, RequestType>({
     mutationFn: async (json) => {
       const endpoint = "/api/auth/sign-up";

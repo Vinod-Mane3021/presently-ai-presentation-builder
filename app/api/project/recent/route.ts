@@ -2,6 +2,7 @@ import { HttpStatus, HttpStatusCode } from "@/constants/http-status";
 // import { getRecentProjects } from "@/db/services/product";
 import { withAuthorizedApiHandler } from "@/lib/api-handler";
 import { ApiResponse } from "@/lib/api-response";
+import { waitFor } from "@/lib/utils";
 import { User } from "next-auth";
 
 const sample_data = [
@@ -85,6 +86,7 @@ export const GET = withAuthorizedApiHandler(
   async (req: Request, user: User) => {
     console.log({ req, user });
     // const recentProjects = getRecentProjects(user.id)
+    await waitFor(2000)
     return new ApiResponse({
       success: true,
       message: "list of projects that owned by user",
