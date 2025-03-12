@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import {
   signInUser,
   signInWithOAuthProvider,
-} from "./features/user/api/sign-in";
+} from "./hooks/api/sign-in";
 import { Env } from "./constants/env";
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"

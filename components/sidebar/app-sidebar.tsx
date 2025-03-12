@@ -22,6 +22,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { RecentProjects } from "./recent-projects"
 
 // This is sample data.
 const data = {
@@ -85,6 +86,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavProjects projects={data.projects} />
+        <RecentProjects/>
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

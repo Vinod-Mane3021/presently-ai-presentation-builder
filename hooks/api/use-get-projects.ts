@@ -1,5 +1,5 @@
-import { ProjectType } from "@/schemas/project";
 import { ApiResponseType } from "@/types/api";
+import { ProjectType } from "@/schemas/project";
 import { useQuery } from "@tanstack/react-query";
 
 type ResponseType = ApiResponseType<ProjectType[]>;

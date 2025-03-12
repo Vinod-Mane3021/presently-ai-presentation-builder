@@ -1,7 +1,7 @@
 "use client";
 
 import { Heading } from "@/components/heading";
-import { useGetProjects } from "@/features/project/api/use-get-projects";
+import { useGetProjects } from "@/hooks/api/use-get-projects";
 import React, { useEffect } from "react";
 import {
   Card,
