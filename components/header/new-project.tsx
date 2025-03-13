@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 
 const NewProjectButton = () => {
   return (
-    <Button className="flex items-center px-10">
+    <Button className="flex items-center px-5 lg:px-8 xl:px-10">
       <Plus className='size-4' />
       New Project
     </Button>
