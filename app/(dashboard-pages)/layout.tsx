@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <SidebarProvider className="" suppressHydrationWarning>
+    <SidebarProvider suppressHydrationWarning>
       <AppSidebar />
       <main className="w-full">
         <Header />

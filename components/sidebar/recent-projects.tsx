@@ -52,7 +52,7 @@ export const RecentProjects = () => {
           <p
             onClick={() => handleClickProject(project.id, project.slides)}
             key={project.id}
-            className="w-full truncate cursor-pointer hover:bg-accent px-2 py-2 rounded-lg "
+            className="w-full truncate cursor-pointer hover:bg-accent px-2 py-[5px] rounded-lg "
           >
             {project.title}
           </p>
