@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import QueryProviders from "@/providers/query-providers";
 import { SessionProvider } from "next-auth/react";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

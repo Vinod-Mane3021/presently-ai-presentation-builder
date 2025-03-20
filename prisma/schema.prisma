@@ -18,31 +18,47 @@ model User {
   username     String   @unique
   email        String   @unique
   password     String?
-  profileImage String?
+  profile_image String?
   provider     Provider
-  providerId   String?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  provider_id   String?
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
 
-  Projects          Project[] @relation("OwnedProjects")
-  PurchasedProjects Project[] @relation("PurchasedProjects")
+  projects          Project[] @relation("owned_projects")
+  purchased_projects PurchasedProject[] 
+
+  @@map("users")
 }
 
 model Project {
   id         String   @id @default(cuid())
   title      String
   slides     Json?
-  userId     String
+  user_id     String
   outlines   String[]
-  isDeleted  Boolean  @default(false)
-  isSellable Boolean  @default(false)
-  variantId  String?
+  is_deleted  Boolean  @default(false)
+  is_sellable Boolean  @default(false)
+  variant_id  String?
   thumbnail  String?
-  themeName  String   @default("light")
+  theme_name  String   @default("light")
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 
-  User       User   @relation("OwnedProjects", fields: [userId], references: [id])
-  Purchasers User[] @relation("PurchasedProjects")
+  users       User   @relation("owned_projects", fields: [user_id], references: [id])
+  purchasers PurchasedProject[]
+
+  @@map("projects")
+}
+
+
+model PurchasedProject {
+  userId    String
+  projectId String
+
+  user    User    @relation(fields: [userId], references: [id])
+  project Project @relation(fields: [projectId], references: [id])
+
+  @@id([userId, projectId])
+  @@map("purchased_projects")
 }

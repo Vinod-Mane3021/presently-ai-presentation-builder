@@ -63,7 +63,7 @@ export const POST = withApiHandler(async (req: Request) => {
       id: existingUser.id,
       email: existingUser.email,
       name: existingUser.username,
-      image: existingUser.profileImage,
+      image: existingUser.profile_image,
     },
   });
 });

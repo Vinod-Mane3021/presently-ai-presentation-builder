@@ -26,8 +26,8 @@ export const signUpSchema = z.object({
 export const signInWithOauthProviderSchema = z.object({
   username: z.string(),
   email: z.string().email({ message: "Invalid email address" }),
-  profileImage: z.string().optional().nullable(),
-  providerId: z.string(),
+  profile_image: z.string().optional().nullable(),
+  provider_id: z.string(),
   provider: z.enum(["github", "google"]),
 });
 

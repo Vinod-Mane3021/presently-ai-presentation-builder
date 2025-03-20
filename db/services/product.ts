@@ -1,13 +1,13 @@
 import { db } from "../prisma-client";
 
-export const getProjectsByUser = async (userId: string | undefined) => {
+export const getProjectsByUser = async (user_id: string | undefined) => {
   const projects = await db.project.findMany({
     where: {
-      userId,
-      isDeleted: false,
+      user_id,
+      is_deleted: false,
     },
     orderBy: {
-      updatedAt: "desc"
+      updated_at: "desc"
     }
   });
 
@@ -15,14 +15,14 @@ export const getProjectsByUser = async (userId: string | undefined) => {
 };
 
 
-export const getRecentProjects = async(userId: string | undefined) => {
+export const getRecentProjects = async(user_id: string | undefined) => {
   const projects = await db.project.findMany({
     where: {
-      userId,
-      isDeleted: false,
+      user_id,
+      is_deleted: false,
     },
     orderBy: {
-      updatedAt: "desc"
+      updated_at: "desc"
     },
     take: 5
   });

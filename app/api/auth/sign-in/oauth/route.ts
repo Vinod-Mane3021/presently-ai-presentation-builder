@@ -14,7 +14,7 @@ export const POST = withApiHandler(async (req: Request) => {
     return new ValidationErrorApiResponse(errors);
   }
 
-  const { email, provider, providerId, username, profileImage } = validated.data;
+  const { email, provider, provider_id, username, profile_image } = validated.data;
 
   // Check for existing user by email or username
   const existingUser = await db.user.findFirst({
@@ -37,7 +37,7 @@ export const POST = withApiHandler(async (req: Request) => {
       where: {
         id: existingUser.id,
       },
-      data: { email, provider, providerId, username, profileImage },
+      data: { email, provider, provider_id, username, profile_image },
     });
 
     if (!updated_existingUser) {
@@ -59,7 +59,7 @@ export const POST = withApiHandler(async (req: Request) => {
   }
 
   const new_user = await db.user.create({
-    data: { email, provider, providerId, username, profileImage },
+    data: { email, provider, provider_id, username, profile_image },
   });
 
   if (!new_user) {

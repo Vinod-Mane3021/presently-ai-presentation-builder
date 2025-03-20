@@ -100,9 +100,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           const response = await signInWithOAuthProvider({
             username: user.name,
             email: user.email,
-            profileImage: user.image,
+            profile_image: user.image,
             provider: account.provider,
-            providerId: account.providerAccountId,
+            provider_id: account.providerAccountId,
           });
           if (!response.success) {
             return null;
